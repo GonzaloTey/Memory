@@ -15,6 +15,7 @@ header {
   text-align: center;
   color: rgba(255, 0, 0, 0.295);
   background-color: #21552842;
+  margin-bottom: 1em;
 }
 
 main {
@@ -36,7 +37,7 @@ main {
 }
 
 .formulario {
-  background-color: rgba(95, 94, 94, 0.445);
+  background-color: rgba(95, 94, 94, 0.329);
   min-width: 50%;
   width: 60%;
   margin: auto;
@@ -51,7 +52,7 @@ input {
   border: none;
   border-bottom: 2px solid rgba(253, 255, 253, 0.571);
   padding: 0.3em;
-  color: #fff;
+  color: #000;
   font-size: medium;
   font-weight: 600;
   transition: all 0.3s;
@@ -68,6 +69,7 @@ input:focus {
   background: #1baea990;
   letter-spacing: 1px;
   font-size: medium;
+  border-radius: 7px;
   color: rgb(241, 241, 237);
   cursor: pointer;
   transition: all 0.3s;
@@ -77,6 +79,43 @@ input:focus {
   background: #1baea9;
   width: 42%;
   color: white;
+}
+
+.botonForm2 {
+  margin: auto;
+  padding: 0.5em;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+  width: 60%;
+  background: #1baea96b;
+  letter-spacing: 1px;
+  font-size: medium;
+  color: rgb(241, 241, 237);
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
+
+.botonForm2:hover {
+  background: #1baea9;
+  width: 62%;
+  color: white;
+}
+
+.formulario2 {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.dialogoUsuario {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+ul li {
+  list-style-type: none;
+  color: red;
+  text-transform: uppercase;
 }
 
 .mesa {

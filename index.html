@@ -13,13 +13,14 @@
     <script defer src="js/descubrir-comparar.js"></script>
     <script defer src="js/acierto-error.js"></script>
     <script defer src="js/inicializacion.js"></script>
+    <script defer src="js/botones-form.js"></script>
 
   </head>
 
   <body>
     <header>
       <h1>MEMORY</h1>
-      <h2 id="saludo"></h2>
+      <!-- <h2 id="saludo"></h2> -->
     </header>
     <main>
       <div id="mensajeBienvenida"></div>
@@ -35,6 +36,22 @@
         <button type="submit" class="botonForm">ENVIAR</button>
       </form>
       <div id="mesa" class="mesa"></div>
+      <section class="dialogoUsuario">
+        <form class="formulario">
+          <div class="formulario2"> 
+            <h2>Envianos tu sugerencia de emojis<span style='font-size:1em;'>&#128521;</span></h2>
+            <label for="sugerencias">Tus ideas (Maximo 20 letras)</label>
+            <input type="text" id="sugerencias" name="ideas" maxlength="20" autocomplete="off" placeholder="Ej: Emojis de comida">
+            <button class="botonForm2" id="enviar">Enviar</button>
+            <button class="botonForm2" id="borrar">Borrar</button>
+            <button class="botonForm2" id="ver">Ver mis sugerencias</button>
+          </div>
+          <div>
+            <ul id="sugerenciasUl">
+            </ul>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
