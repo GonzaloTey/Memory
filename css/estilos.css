@@ -1,20 +1,82 @@
 body {
+  margin: auto;
+  min-height: 100vh;
   font-size: 2rem;
   display: flex;
   flex-direction: column;
+  background-image: url(../assets/fondo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 header {
   text-align: center;
-  color: rgb(17, 14, 14);
-  background-color: blanchedalmond;
+  color: rgba(255, 0, 0, 0.295);
+  background-color: #21552842;
 }
 
 main {
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   position: relative;
+}
+
+.bienvenida {
+  text-align: center;
+  background-color: rgba(95, 94, 94, 0.445);
+  padding: 0.1em;
+  width: 70%;
+  margin: .5em auto;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.formulario {
+  background-color: rgba(95, 94, 94, 0.445);
+  min-width: 50%;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  padding: 0.3em;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(253, 255, 253, 0.571);
+  padding: 0.3em;
+  color: #fff;
+  font-size: medium;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid rgba(253, 255, 253, 1);
+}
+
+.botonForm {
+  padding: 0.5em;
+  width: 40%;
+  background: #1baea990;
+  letter-spacing: 1px;
+  font-size: medium;
+  color: rgb(241, 241, 237);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.botonForm:hover {
+  background: #1baea9;
+  width: 42%;
+  color: white;
 }
 
 .mesa {
@@ -31,7 +93,7 @@ main {
   height: 6rem;
   margin: 0.5rem;
   border-radius: 0.3em;
-  background-color: #000;
+  background-color: rgb(0, 0, 0);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   transition: 0.3s;
@@ -66,6 +128,49 @@ main {
   transform: rotateY(-180deg);
 }
 
-.acertada {
-  opacity: 0;
+@keyframes error {
+
+  10%,
+  90% {
+    transform: rotateY(-180deg) translateX(-1px);
+  }
+
+  20%,
+  80% {
+    transform: rotateY(-180deg) translateX(2px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotateY(-180deg) translateX(-4px);
+  }
+
+  40%,
+  60% {
+    transform: rotateY(-180deg) translateX(4px);
+  }
+}
+
+@keyframes acierto {
+  from {
+    transform: rotateY(-180deg) scale(1);
+  }
+
+  25% {
+    transform: rotateY(-180deg) scale(1.1);
+  }
+
+  to {
+    transform: rotateY(-180deg) scale(1);
+  }
+}
+
+
+.acertada .tarjeta__contenido {
+  animation: acierto 1s;
+}
+
+.error {
+  animation: error 1s;
 }

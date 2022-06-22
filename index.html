@@ -4,14 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Juego de la Memoria - Tey Pinto</title>
-    <!-- Links CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600" rel="stylesheet" />
-    <link href="css/variables.css" rel="stylesheet" />
+    <!-- Link CSS -->
     <link href="css/estilos.css" rel="stylesheet" />
     <!-- Link al JS -->
-    <script src="js/variables.js"></script>
-    <script src="js/baraja-reparte.js"></script>
-    <script src="js/descubrir-comparar.js"></script>
+    <script defer src="js/variables.js"></script>
+    <script defer src="js/formulario.js"></script>
+    <script defer src="js/baraja-reparte.js"></script>
+    <script defer src="js/descubrir-comparar.js"></script>
     <script defer src="js/acierto-error.js"></script>
     <script defer src="js/inicializacion.js"></script>
 
@@ -19,10 +18,22 @@
 
   <body>
     <header>
-      <h1>Juego de la memoria</h1>
-      <h2>En proceso de construccion</h2>
+      <h1>MEMORY</h1>
+      <h2 id="saludo"></h2>
     </header>
     <main>
+      <div id="mensajeBienvenida"></div>
+      <form class="formulario" id="formu">
+        <div>
+          <label for="name">Ingrese su nombre</label>
+          <input type="text" id="name" name="nombre" autocomplete="off">
+        </div>
+        <div>
+          <label for="fecha">Año de nacimiento</label>
+          <input type="text" id="fecha" maxlength="4" autocomplete="off">
+        </div>
+        <button type="submit" class="botonForm">ENVIAR</button>
+      </form>
       <div id="mesa" class="mesa"></div>
     </main>
   </body>
