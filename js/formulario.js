@@ -28,16 +28,6 @@ const recogeDatos = (e) => {
     bienvenida.classList.add("bienvenida");
     bienvenida.innerHTML = mensaje;
 
-    
-    //Local storage - Usuario participante
-    /* if (nombre != " ") {
-        const saludo = document.getElementById("saludo");
-        const participante = `${nombre}`;
-        localStorage.setItem("Usuario", participante);
-        let nombreParticipante = localStorage.getItem("Usuario");
-        saludo.innerHTML = `Usuario Registrado: ${nombreParticipante}`
-
-    } */
 }
 
 formulario.addEventListener("submit", recogeDatos);
