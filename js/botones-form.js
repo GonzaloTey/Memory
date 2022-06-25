@@ -13,6 +13,25 @@ const enviar = document.getElementById("enviar");
 const borrar = document.getElementById("borrar");
 const ver = document.getElementById("ver");
 
+
+//constante para mejorar el alert
+
+const listado = () => {
+    Swal.fire({
+        title: 'Listo',
+        icon: 'success'
+    })
+}
+const verListado = (sug) => {
+    Swal.fire({
+        title: 'Tus sugerencias Enviadas',
+        icon: 'info',
+        text: sug
+    })
+}
+
+
+
 //funciones y eventos
 /* ACLARACION: Se supone que al hacer click en enviar mandamos las sugerencias a mi backend pero alno tenerlo pongo el preventDefault ya que sino no podria ver el proceso */
 
@@ -22,6 +41,7 @@ enviar.addEventListener("click", (e) => {
     borrar.click(); //Excelente Truco
     inputSugerencias.focus(); // Excelente truco
     localStorage.setItem("sugerencias", JSON.stringify(sugerencias)) //Convierto array a string con el objeto JSON y su metodo stringify
+    listado();
 });
 
 borrar.addEventListener("click", (e) => {
@@ -37,4 +57,6 @@ ver.addEventListener("click", (e) => {
             sugerencia += `<li>${muestra}</>`
     }
     ulSugerencias.innerHTML = sugerencia;
+    verListado(mostrar)
+
 });
