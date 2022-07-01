@@ -5,13 +5,14 @@ const listo = () => {
     Swal.fire({
         title: 'Excelente',
         icon: 'success',
-        confirmButtonText: 'Empezemos'
+        confirmButtonText: 'Empecemos'
     })
 };
-const noListo = () => {
+const noListo = (argumento) => {
     Swal.fire({
         title: 'Algo salio mal!',
         icon: 'error',
+        text: argumento,
         confirmButtonText: 'Inscribirme de vuelta'
     })
 };
@@ -23,33 +24,36 @@ const recogeDatos = (e) => {
     let edad = year - fecha;
     let restante = 10 - edad;
     let mensaje;
-    let bienvenida = document.querySelector("#mensajeBienvenida");
+    let bienvenida = document.querySelector("#mensajeBienvenida"); 
 
     if (nombre == "") {
-        mensaje = 'Por Favor rellena el campo "TU NOMBRE"'
+        noListo("Por favor llena el campo 'Ingrese su nombre'")
     } else {
         if (edad < 10) {
-            mensaje = `<p>Hola ${nombre}!!, tienes ${edad} años. Mínimo 10 años. Te fáltan ${restante} años</p>`;
+            mensaje = `<p>Hola ${nombre}!! tienes ${edad} años. Mínimo 10 años. Te fáltan ${restante} años para poder jugar</p>`;
+            bienvenida.classList.add("bienvenida");
+            bienvenida.innerHTML = mensaje;
         } else if (edad >= 10 && edad < 50) {
             mensaje = `<p>Hola ${nombre}, Bienvenido/a!! Tienes ${edad} años.</p>`;
+            bienvenida.classList.add("bienvenida");
+            bienvenida.innerHTML = mensaje;
             listo();
         } else if (edad >= 50 && edad <= 85) {
             mensaje = `<p>Hola ${nombre}, Bienvenido/a!! Tienes ${edad} años, ésto te será de gran ayuda</p>`
+            bienvenida.classList.add("bienvenida");
+            bienvenida.innerHTML = mensaje;
             listo();
         } else if (edad > 85 && edad < 105) {
             mensaje = `<p>Hola ${nombre}, Bienvenido/a!! Tienes ${edad} años, Me cuesta creerlo! Pero adelante</p>`
+            bienvenida.classList.add("bienvenida");
+            bienvenida.innerHTML = mensaje;
             listo();
         } else if (fecha == "") {
-            mensaje = `Por Favor ${nombre} rellena el campo "Año de nacimiento"`;
-            noListo();
+            noListo("Por favor llena el campo 'Año de nacimiento'");
         } else {
-            mensaje = `<p>Hola ${nombre}, Ingresa una fecha creible</p>`;
-            noListo()
+            noListo("Por favor ingresa fecha creible")
         } 
     }
-    bienvenida.classList.add("bienvenida");
-    bienvenida.innerHTML = mensaje;
-
 }
 
 formulario.addEventListener("submit", recogeDatos);
