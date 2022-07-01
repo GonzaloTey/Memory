@@ -133,7 +133,7 @@ ul li {
   height: 6rem;
   margin: 0.5rem;
   border-radius: 0.3em;
-  background-image: url(/assets/logo2.png);
+  background-image: url(../assets/logo2.png);
   background-size: contain;
   background-position: center;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
