@@ -67,10 +67,5 @@ borrar.addEventListener("click", (e) => {
 ver.addEventListener("click", (e) => {
     e.preventDefault()
     const mostrar = JSON.parse(localStorage.getItem("sugerencias"))
-    /* let sugerencia = "";
-    for (muestra of mostrar) {
-            sugerencia += `<li>${muestra}</>`
-    }
-    ulSugerencias.innerHTML = sugerencia; */
     verListado(mostrar);
 });
