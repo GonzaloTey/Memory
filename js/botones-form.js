@@ -67,6 +67,6 @@ borrar.addEventListener("click", (e) => {
 ver.addEventListener("click", (e) => {
     e.preventDefault()
     const mostrar = JSON.parse(localStorage.getItem("sugerencias")) || [];
-    (mostrar !== "" || mostrar !== " ") ? verListado(mostrar) : verListado2()
+    (mostrar === "" || mostrar === " ") ? verListado2() : verListado(mostrar)
     //verListado(mostrar);
 });
