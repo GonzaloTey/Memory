@@ -2,8 +2,8 @@
 
 //variables
 
-const sugerencias = []; //Este va a ser mi array de elementos
-const listadoSugerencias = [] //Mi array de objetos
+const sugerencias = []; 
+const listadoSugerencias = [];
 
 const inputSugerencias = document.getElementById("sugerencias");
 
@@ -22,20 +22,20 @@ const listado = (suge) => {
         text: suge,
         icon: 'success'
     })
-}
+};
 const verListado = (sug) => {
     Swal.fire({
         title: 'Tus sugerencias Enviadas',
         icon: 'info',
         text: sug
     })
-}
+};
 const verListado2 = () => {
     Swal.fire({
         title: 'No enviaste sugerencias',
         icon: 'warning'
     })
-}
+};
 
 //funciones y eventos
 
@@ -53,7 +53,7 @@ enviar.addEventListener("click", (e) => {
 
     //Aplicacion de operador Ternario
 
-    (suge != "") ?
+    (suge !== "" && suge !== " ") ?
     (sugerencias.push(inputSugerencias.value), borrar.click(), inputSugerencias.focus(), localStorage.setItem("sugerencias", JSON.stringify(sugerencias)), listado(suge))
     :
     (verListado2())
@@ -66,6 +66,7 @@ borrar.addEventListener("click", (e) => {
 
 ver.addEventListener("click", (e) => {
     e.preventDefault()
-    const mostrar = JSON.parse(localStorage.getItem("sugerencias"))
-    verListado(mostrar);
+    const mostrar = JSON.parse(localStorage.getItem("sugerencias")) || [];
+    (mostrar !== "" || mostrar !== " ") ? verListado(mostrar) : verListado2()
+    //verListado(mostrar);
 });
