@@ -8,7 +8,7 @@ let dificultad1 = ["❤", "❤", "🎁", "🎁"];
 let dificultad2 = ["😃", "😃", "⚽", "⚽", "🥊", "🥊", "🎩","🎩"];
 let dificultad3 = ["📢", "📢", "🎸", "🎸", "☎", "☎", "🚬", "🚬", "✂", "✂", "🍔", "🍔"];
 
-
+const [feliz] = dificultad2;
 
 const formulario = document.getElementById("formu");
 const year = new Date().getFullYear();
@@ -52,7 +52,7 @@ const recogeDatos = (e) => {
                 elemento.addEventListener("click", descubrir);
             });
         } else if (edad >= 10 && edad < 50) {
-            mensaje = `<p>Hola ${nombre}, Bienvenido/a!! Tienes ${edad} años.</p>`;
+            mensaje = `<p>Hola ${nombre}${feliz}, Bienvenido/a!! Tienes ${edad} años.</p>`;
             bienvenida.classList.add("bienvenida");
             bienvenida.innerHTML = mensaje;
             listo();
@@ -63,7 +63,7 @@ const recogeDatos = (e) => {
                 elemento.addEventListener("click", descubrir);
             });
         } else if (edad >= 50 && edad <= 85) {
-            mensaje = `<p>Hola ${nombre}, Bienvenido/a!! Tienes ${edad} años, ésto te será de gran ayuda</p>`
+            mensaje = `<p>Hola ${nombre}${feliz}, Bienvenido/a!! Tienes ${edad} años, ésto te será de gran ayuda</p>`
             bienvenida.classList.add("bienvenida");
             bienvenida.innerHTML = mensaje;
             listo();
@@ -74,7 +74,7 @@ const recogeDatos = (e) => {
                 elemento.addEventListener("click", descubrir);
             });
         } else if (edad > 85 && edad < 105) {
-            mensaje = `<p>Hola ${nombre}, Bienvenido/a!! Tienes ${edad} años, Me cuesta creerlo! Pero adelante</p>`
+            mensaje = `<p>Hola ${nombre}${feliz}, Bienvenido/a!! Tienes ${edad} años, Me cuesta creerlo! Pero adelante</p>`
             bienvenida.classList.add("bienvenida");
             bienvenida.innerHTML = mensaje;
             listo();
