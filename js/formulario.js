@@ -1,4 +1,5 @@
 //Variables
+const btnEnviar = document.getElementById("btnEnviar");
 
 let grupoTarjetas = ["👓", "🧦", "🎓", "🧤", "🦺", "🥾", "🩳", "👕"];
 let totalTarjetas = grupoTarjetas.concat(grupoTarjetas);
@@ -62,6 +63,7 @@ const recogeDatos = (e) => {
             document.querySelectorAll(".tarjeta").forEach(function (elemento) {
                 elemento.addEventListener("click", descubrir);
             });
+            btnEnviar.remove()
         } else if (edad >= 50 && edad <= 85) {
             mensaje = `<p>Hola ${nombre}${feliz}, Bienvenido/a!! Tienes ${edad} años, ésto te será de gran ayuda</p>`
             bienvenida.classList.add("bienvenida");
@@ -73,6 +75,7 @@ const recogeDatos = (e) => {
             document.querySelectorAll(".tarjeta").forEach(function (elemento) {
                 elemento.addEventListener("click", descubrir);
             });
+            btnEnviar.remove()
         } else if (edad > 85 && edad < 105) {
             mensaje = `<p>Hola ${nombre}${feliz}, Bienvenido/a!! Tienes ${edad} años, Me cuesta creerlo! Pero adelante</p>`
             bienvenida.classList.add("bienvenida");
@@ -84,6 +87,7 @@ const recogeDatos = (e) => {
             document.querySelectorAll(".tarjeta").forEach(function (elemento) {
                 elemento.addEventListener("click", descubrir);
             });
+            btnEnviar.remove()
         } else if (fecha == "") {
             noListo("Por favor llena el campo 'Año de nacimiento'");
         } else {
@@ -93,3 +97,4 @@ const recogeDatos = (e) => {
 }
 
 formulario.addEventListener("submit", recogeDatos);
+//const btnEnviar = document.getElementById("btnEnviar");
