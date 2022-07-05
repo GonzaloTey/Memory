@@ -30,6 +30,20 @@ const noListo = (argumento) => {
     })
 };
 
+const gracias = (nombre) => {
+    setTimeout(() => {
+        Swal.fire({
+            title: `Tu cerebro dice ¡Gracias ${nombre}!`,
+            text: '¿Disfrutando del juego?',
+            imageUrl: 'https://vovonilva.com.br/wp-content/uploads/2018/06/exercicios-memoria-5000x2500.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'CerebroEntrenando',
+            confirmButtonText: 'Si, Continuar jugando <i class="fa fa-arrow-right"></i>',
+        }) 
+    }, 20000);
+}
+
 const recogeDatos = (e) => {
     e.preventDefault();
     let nombre = document.querySelector("#name").value;
@@ -63,7 +77,8 @@ const recogeDatos = (e) => {
             document.querySelectorAll(".tarjeta").forEach(function (elemento) {
                 elemento.addEventListener("click", descubrir);
             });
-            btnEnviar.remove()
+            btnEnviar.remove();
+            gracias(nombre);
         } else if (edad >= 50 && edad <= 85) {
             mensaje = `<p>Hola ${nombre}${feliz}, Bienvenido/a!! Tienes ${edad} años, ésto te será de gran ayuda</p>`
             bienvenida.classList.add("bienvenida");
@@ -75,7 +90,8 @@ const recogeDatos = (e) => {
             document.querySelectorAll(".tarjeta").forEach(function (elemento) {
                 elemento.addEventListener("click", descubrir);
             });
-            btnEnviar.remove()
+            btnEnviar.remove();
+            gracias(nombre);
         } else if (edad > 85 && edad < 105) {
             mensaje = `<p>Hola ${nombre}${feliz}, Bienvenido/a!! Tienes ${edad} años, Me cuesta creerlo! Pero adelante</p>`
             bienvenida.classList.add("bienvenida");
@@ -87,7 +103,8 @@ const recogeDatos = (e) => {
             document.querySelectorAll(".tarjeta").forEach(function (elemento) {
                 elemento.addEventListener("click", descubrir);
             });
-            btnEnviar.remove()
+            btnEnviar.remove();
+            gracias(nombre);
         } else if (fecha == "") {
             noListo("Por favor llena el campo 'Año de nacimiento'");
         } else {
