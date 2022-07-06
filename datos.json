@@ -1,0 +1,6 @@
+[
+    {"nombre":"Buscaminas", "dificultad":"Dificil", "estado":"En Proceso", "edad":14},
+    {"nombre":"Solitario", "dificultad":"Medio", "estado":"En Proceso", "edad":16},
+    {"nombre":"Carta Blanca", "dificultad":"Dificil", "estado":"En Proceso", "edad":18},
+    {"nombre":"Pinball", "dificultad":"Facil", "estado":"En Proceso", "edad":6}
+]

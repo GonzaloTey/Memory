@@ -216,3 +216,30 @@ ul li {
 .error {
   animation: error 1s;
 }
+
+
+.tituloJuegos {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 900;
+  color: rgba(5, 4, 4, 0.699);
+}
+
+.botonVer {
+  padding: 0.5em;
+  margin:auto;
+  width: 20%;
+  background: #1baea96b;
+  letter-spacing: 1px;
+  font-size: large;
+  border-radius: 7px;
+  color: rgb(241, 241, 237);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.botonVer:hover {
+  background: #1baea9;
+  width: 22%;
+  color: white;
+}
