@@ -1,9 +1,10 @@
 //Variables
+const inputNombre = document.querySelector("#name");
+const inputFecha = document.querySelector("#fecha");
 const btnEnviar = document.getElementById("btnEnviar");
 
 let grupoTarjetas = ["👓", "🧦", "🎓", "🧤", "🦺", "🥾", "🩳", "👕"];
 let totalTarjetas = grupoTarjetas.concat(grupoTarjetas);
-
 
 let dificultad1 = ["❤", "❤", "🎁", "🎁"];
 let dificultad2 = ["😃", "😃", "⚽", "⚽", "🥊", "🥊", "🎩","🎩"];
@@ -13,6 +14,10 @@ const [feliz] = dificultad2;
 
 const formulario = document.getElementById("formu");
 const year = new Date().getFullYear();
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++Funciones++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
 
 const listo = () => {
     Swal.fire({
@@ -55,7 +60,11 @@ const recogeDatos = (e) => {
     let aprobado;
 
     if (nombre == "") {
+        inputNombre.classList.add("input2")
         noListo("Por favor llena el campo 'Ingrese su nombre'")
+        setTimeout(() => {
+            inputNombre.classList.remove("input2")
+        }, 3000);
     } else {
         if (edad < 10) {
             mensaje = `<p>Hola ${nombre}!! tienes ${edad} años. Mínimo 10 años. Te fáltan ${restante} años para poder jugar</p>`;
@@ -106,9 +115,17 @@ const recogeDatos = (e) => {
             btnEnviar.remove();
             gracias(nombre);
         } else if (fecha == "") {
+            inputFecha.classList.add("input2");
             noListo("Por favor llena el campo 'Año de nacimiento'");
+            setTimeout(() => {
+                inputFecha.classList.remove("input2")
+            }, 3000);
         } else {
-            noListo("Por favor ingresa fecha creible")
+            inputFecha.classList.add("input2");
+            noListo("Por favor ingresa fecha creible");
+            setTimeout(() => {
+                inputFecha.classList.remove("input2")
+            }, 3000);
         } 
     }
 }

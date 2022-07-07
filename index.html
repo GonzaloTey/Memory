@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Juego de la Memoria - Tey Pinto</title>
-    <!-- Link CSS -->
-    <link href="css/estilos.css" rel="stylesheet" />
     <!-- Link Bootstrap5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Link CSS -->
+    <link href="css/estilos.css" rel="stylesheet" />
     <!-- link fontAwesome -->
     <script src="https://kit.fontawesome.com/750b319d71.js" crossorigin="anonymous"></script>
     <!-- Link a libreriasJS -->
@@ -35,13 +35,13 @@
         <h2 class="tituloJuegos">Rellená el formulario para poder Jugar</h2>
         <div>
           <label for="name">Ingrese su nombre</label>
-          <input type="text" id="name" name="nombre" autocomplete="off">
+          <input class="input1" type="text" id="name" name="nombre" autocomplete="off">
         </div>
         <div>
           <label for="fecha">Año de nacimiento</label>
-          <input type="text" id="fecha" maxlength="4" autocomplete="off">
+          <input class="input1" type="text" id="fecha" maxlength="4" autocomplete="off">
         </div>
-        <button id="btnEnviar" type="submit" class="botonForm">ENVIAR</button>
+        <button id="btnEnviar" type="submit" class="botonForm">Inscribirse</button>
       </form>
       <div id="mesa" class="mesa"></div>
       <section class="dialogoUsuario">
@@ -49,25 +49,25 @@
           <div class="formulario2"> 
             <h2>Envianos tu sugerencia de emojis<span style='font-size:1em;'>&#128521;</span></h2>
             <label for="sugerencias">Tus ideas (Maximo 20 letras)</label>
-            <input type="text" id="sugerencias" name="ideas" maxlength="20" autocomplete="off" placeholder="Ej: Emojis de comida">
+            <input class="input1" type="text" id="sugerencias" name="ideas" maxlength="20" autocomplete="off" placeholder="Ej: Emojis de comida">
             <button class="botonForm2" id="enviar">Enviar</button>
             <button class="botonForm2" id="borrar">Borrar</button>
             <button class="botonForm2" id="ver">Ver mis sugerencias</button>
           </div>
-          <div>
+          <!-- <div>
             <ul id="sugerenciasUl">
             </ul>
-          </div>
+          </div> -->
         </form>
       </section>
+      <article>
+        <div class="formulario">
+          <h2 class="tituloJuegos">Proximos Juegos</h2>
+          <button class="botonVer" id="verJuegos">Ver</button>
+        </div>
+        <div id="juegosNuevos"></div>
+      </article>
     </main>
-    <article>
-      <div class="formulario">
-        <h2 class="tituloJuegos">Proximos Juegos</h2>
-        <button class="botonVer" id="verJuegos">Ver</button>
-      </div>
-      <div id="juegosNuevos"></div>
-    </article>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"

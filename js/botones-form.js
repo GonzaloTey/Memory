@@ -68,5 +68,4 @@ ver.addEventListener("click", (e) => {
     e.preventDefault()
     const mostrar = JSON.parse(localStorage.getItem("sugerencias")) || [];
     (mostrar === "" || mostrar === " ") ? verListado2() : verListado(mostrar)
-    //verListado(mostrar);
 });
