@@ -22,7 +22,6 @@
     <script defer src="js/inicializacion.js"></script>
     <script defer src="js/botones-form.js"></script>
     <script defer src="js/promesas.js"></script>
-
   </head>
 
   <body>
@@ -54,18 +53,17 @@
             <button class="botonForm2" id="borrar">Borrar</button>
             <button class="botonForm2" id="ver">Ver mis sugerencias</button>
           </div>
-          <!-- <div>
-            <ul id="sugerenciasUl">
-            </ul>
-          </div> -->
         </form>
       </section>
       <article>
         <div class="formulario">
           <h2 class="tituloJuegos">Proximos Juegos</h2>
-          <button class="botonVer" id="verJuegos">Ver</button>
+          <div class="demoraContainer"></div>
+          <button class="botonVer" id="verJuegos">Conocelos!</button>
         </div>
-        <div id="juegosNuevos"></div>
+        <div class="container">
+          <div class="row m-4 g-3" id="juegosNuevos"></div>
+        </div>
       </article>
     </main>
 

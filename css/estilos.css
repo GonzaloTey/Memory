@@ -13,8 +13,8 @@ body {
 
 header {
   text-align: center;
-  height: 4em;
-  color: rgba(255, 0, 0, 0.616);
+  height: 5em;
+  color: rgba(12, 11, 11, 0.616);
   background-color: rgba(130, 190, 172, 0.925);
   margin-bottom: 1em;
 }
@@ -131,12 +131,6 @@ input:focus {
   flex-flow: row wrap;
 }
 
-ul li {
-  list-style-type: none;
-  color: red;
-  text-transform: uppercase;
-}
-
 .mesa {
   display: flex;
   flex-wrap: wrap;
@@ -170,7 +164,7 @@ ul li {
   bottom: 0;
   transform: rotateY(-180deg);
   backface-visibility: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 0.3em;
   display: flex;

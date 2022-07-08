@@ -1,5 +1,6 @@
 const juegos = document.getElementById("juegosNuevos");
 const verJuegos = document.getElementById("verJuegos");
+const demoraContainer = document.querySelector(".demoraContainer")
 
 const llamarJuegos = async () => {
     const response = await fetch('/datos.json');
@@ -8,29 +9,33 @@ const llamarJuegos = async () => {
     data.forEach(element => {
         const marco = document.createElement("div")
 
-        marco.innerHTML = `<div class="d-flex justify-content-center row row-cols-2 row-cols-md-3 row-cols-lg-4 mt-3 g-3">
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <img src="../assets/logo2.png" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">${element.nombre}</h5>
-                                            <p class="card-text">
-                                            - Dificultad: ${element.dificultad}.<br>
-                                            - Estado: ${element.estado}.<br>
-                                            - Edad: ${element.edad}</p>
-                                        </div>
-                                    </div>
+        marco.innerHTML = `
+                            <div class="card h-100 bg-light">
+                                <img src= "../assets/juego${element.id}.png"
+                                class="card-img-top" alt="juegos">
+                                <div class="card-body fs-5">
+                                    <h5 class="card-title">${element.nombre}</h5>
+                                    <p class="card-text">
+                                    - Dificultad: ${element.dificultad}.<br>
+                                    - Estado: ${element.estado}.<br>
+                                    - Edad: ${element.edad}</p>
+
                                 </div>
-                            </div>` 
-            
+                                <button type="button" class="btn btn-secondary disabled">Jugar!</button>
+                            </div>`
+        marco.classList.add("col-12", "col-sm-6", "col-xl-3", "shadow", "p-3", "mb-5", "bg-body", "rounded")
         juegos.append(marco)
     });
 }
 
 const timer = () => {
+    const demora = document.createElement("h3");
+    demora.textContent = "La carga puede demorar unos segundos...";
+    demoraContainer.append(demora);
     setTimeout(() => {
-        llamarJuegos()
-    }, 2000);
+        llamarJuegos();
+        demora.textContent = " "
+    }, 2500);
 }
 
 verJuegos.addEventListener("click", () => {

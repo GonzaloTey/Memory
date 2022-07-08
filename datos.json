@@ -1,6 +1,6 @@
 [
-    {"nombre":"Buscaminas", "dificultad":"Dificil", "estado":"En Proceso", "edad":14},
-    {"nombre":"Solitario", "dificultad":"Medio", "estado":"En Proceso", "edad":16},
-    {"nombre":"Carta Blanca", "dificultad":"Dificil", "estado":"En Proceso", "edad":18},
-    {"nombre":"Pinball", "dificultad":"Facil", "estado":"En Proceso", "edad":6}
+    {"nombre":"Buscaminas", "dificultad":"Dificil", "estado":"En Proceso", "edad":14, "id":1},
+    {"nombre":"Solitario", "dificultad":"Medio", "estado":"En Proceso", "edad":16, "id": 2},
+    {"nombre":"Carta Blanca", "dificultad":"Dificil", "estado":"En Proceso", "edad":18, "id": 3},
+    {"nombre":"Pinball", "dificultad":"Facil", "estado":"En Proceso", "edad":6, "id": 4}
 ]
