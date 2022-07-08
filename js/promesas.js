@@ -11,7 +11,7 @@ const llamarJuegos = async () => {
 
         marco.innerHTML = `
                             <div class="card h-100 bg-light">
-                                <img src= "../assets/juego${element.id}.png"
+                                <img src= "../assets/juego${element.id}.jpg"
                                 class="card-img-top" alt="juegos">
                                 <div class="card-body fs-5">
                                     <h5 class="card-title">${element.nombre}</h5>
