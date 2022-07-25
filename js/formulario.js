@@ -131,4 +131,4 @@ const recogeDatos = (e) => {
 }
 
 formulario.addEventListener("submit", recogeDatos);
-//const btnEnviar = document.getElementById("btnEnviar");
+

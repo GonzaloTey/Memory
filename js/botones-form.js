@@ -42,15 +42,7 @@ const verListado2 = () => {
 enviar.addEventListener("click", (e) => {
     e.preventDefault();
     let suge = inputSugerencias.value;
-    /* if (suge != "") {
-        sugerencias.push(inputSugerencias.value);
-        borrar.click(); //Excelente Truco
-        inputSugerencias.focus(); // Excelente truco
-        localStorage.setItem("sugerencias", JSON.stringify(sugerencias)) //Convierto array a string con el objeto JSON y su metodo stringify
-        listado(suge)
-    } else verListado2() */
-
-
+    
     //Aplicacion de operador Ternario
 
     (suge !== "" && suge !== " ") ?
